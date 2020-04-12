@@ -292,3 +292,4 @@ class _UploadState extends State<Upload>
     return file == null ? buildSplashScreen() : buildUploadForm();
   }
 }
+ 
