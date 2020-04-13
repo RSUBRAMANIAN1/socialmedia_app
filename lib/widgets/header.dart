@@ -5,11 +5,11 @@ AppBar header(context,
   return AppBar(
     automaticallyImplyLeading: removeBackButton ? false : true,
     title: Text(
-      isAppTitle ? "FlutterShare" : titleText,
+      isAppTitle ? "Oru Quarter Sollu 🍻" : titleText,
       style: TextStyle(
         color: Colors.white,
         fontFamily: isAppTitle ? "Signatra" : "",
-        fontSize: isAppTitle ? 50.0 : 22.0,
+        fontSize: isAppTitle ? 40.0 : 22.0,
       ),
       overflow: TextOverflow.ellipsis,
     ),

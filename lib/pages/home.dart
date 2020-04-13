@@ -3,13 +3,13 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttershare/models/user.dart';
-import 'package:fluttershare/pages/activity_feed.dart';
-import 'package:fluttershare/pages/create_account.dart';
-import 'package:fluttershare/pages/profile.dart';
-import 'package:fluttershare/pages/search.dart';
-import 'package:fluttershare/pages/timeline.dart';
-import 'package:fluttershare/pages/upload.dart';
+import 'package:OruQuaterSollu/models/user.dart';
+import 'package:OruQuaterSollu/pages/activity_feed.dart';
+import 'package:OruQuaterSollu/pages/create_account.dart';
+import 'package:OruQuaterSollu/pages/profile.dart';
+import 'package:OruQuaterSollu/pages/search.dart';
+import 'package:OruQuaterSollu/pages/timeline.dart';
+import 'package:OruQuaterSollu/pages/upload.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'dart:io';
 
@@ -216,10 +216,10 @@ getiOSPermission(){
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(
-              'FlutterShare',
+              'Oru Quarter Sollu 🍻',
               style: TextStyle(
                 fontFamily: "Signatra",
-                fontSize: 90.0,
+                fontSize: 50.0,
                 color: Colors.white,
               ),
             ),

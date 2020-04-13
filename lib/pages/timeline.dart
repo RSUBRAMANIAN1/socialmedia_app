@@ -2,12 +2,12 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttershare/models/user.dart';
-import 'package:fluttershare/pages/home.dart';
-import 'package:fluttershare/pages/search.dart';
-import 'package:fluttershare/widgets/header.dart';
-import 'package:fluttershare/widgets/post.dart';
-import 'package:fluttershare/widgets/progress.dart';
+import 'package:OruQuaterSollu/models/user.dart';
+import 'package:OruQuaterSollu/pages/home.dart';
+import 'package:OruQuaterSollu/pages/search.dart';
+import 'package:OruQuaterSollu/widgets/header.dart';
+import 'package:OruQuaterSollu/widgets/post.dart';
+import 'package:OruQuaterSollu/widgets/progress.dart';
 
 class Timeline extends StatefulWidget {
   final User currentUser;
