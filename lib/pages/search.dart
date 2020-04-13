@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fluttershare/models/user.dart';
+import 'package:fluttershare/pages/activity_feed.dart';
 import 'package:fluttershare/pages/home.dart';
 import 'package:fluttershare/widgets/progress.dart';
 
@@ -11,7 +12,8 @@ class Search extends StatefulWidget {
   _SearchState createState() => _SearchState();
 }
 
-class _SearchState extends State<Search> {
+class _SearchState extends State<Search>
+    with AutomaticKeepAliveClientMixin<Search> {
   TextEditingController searchController = TextEditingController();
   Future<QuerySnapshot> searchResultsFuture;
 
@@ -97,8 +99,12 @@ class _SearchState extends State<Search> {
     );
   }
 
+  bool get wantKeepAlive => true;
+
   @override
   Widget build(BuildContext context) {
+    super.build(context);
+
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor.withOpacity(0.8),
       appBar: buildSearchField(),
@@ -116,11 +122,11 @@ class UserResult extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.deepPurple[700],
+      color: Theme.of(context).primaryColor.withOpacity(0.7),
       child: Column(
         children: <Widget>[
           GestureDetector(
-            onTap: () => print('tapped'),
+            onTap: () => showProfile(context, profileId: user.id),
             child: ListTile(
               leading: CircleAvatar(
                 backgroundColor: Colors.grey,
