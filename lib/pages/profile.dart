@@ -268,7 +268,7 @@ class _ProfileState extends State<Profile> {
                     ),
                   ],
                 ),
-                Container(
+               /* Container(
                   alignment: Alignment.centerLeft,
                   padding: EdgeInsets.only(top: 12.0),
                   child: Text(
@@ -278,7 +278,7 @@ class _ProfileState extends State<Profile> {
                       fontSize: 16.0,
                     ),
                   ),
-                ),
+                ),*/
                 Container(
                   alignment: Alignment.centerLeft,
                   padding: EdgeInsets.only(top: 4.0),
@@ -387,6 +387,32 @@ class _ProfileState extends State<Profile> {
           ),
           buildProfilePosts(),
         ],
+      ),
+      endDrawer: Drawer(
+        child:ListView(
+          children:<Widget>[
+           
+         UserAccountsDrawerHeader(
+           currentAccountPicture:  CircleAvatar(
+                      radius: 40.0,
+                      backgroundImage:
+                          CachedNetworkImageProvider(currentUser.photoUrl),
+                    ),
+           accountName: Text(currentUser.displayName),
+           accountEmail:Text(currentUser.email),
+           decoration: BoxDecoration(color:Theme.of(context).accentColor, ),
+          // 
+         ),
+
+         ListTile(
+              leading: Icon(Icons.exit_to_app),
+              title: Text('Logout'),
+              onTap: (){
+                googleSignIn.signOut();
+              },
+         ),
+          ],
+        ),
       ),
     );
   }
